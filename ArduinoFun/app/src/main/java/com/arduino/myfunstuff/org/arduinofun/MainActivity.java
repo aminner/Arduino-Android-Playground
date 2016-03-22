@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private String status;
     private ListView blutoothDisplay;
     private Set<BluetoothDevice> pairedDevices;
+    private boolean mKeepRunning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
