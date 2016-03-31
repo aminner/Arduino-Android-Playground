@@ -14,6 +14,10 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.Set;
 
+import rx.Observer;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
 public class MainActivity extends AppCompatActivity {
 
     private String status;
@@ -48,6 +52,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             blutoothDisplay.setAdapter(mArrayAdapter);
+            ITwitterApi api = TwitterApi.createTwitterApi();
+            api.UserFeed().subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Observer<TwitterResponse>(){
+
+                        @Override
+                        public void onCompleted() {
+
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+
+                        }
+
+                        @Override
+                        public void onNext(TwitterResponse twitterResponse) {
+
+                        }
+                    });
+
+
         }
         else {
             status = "Bluetooth is not Enabled.";

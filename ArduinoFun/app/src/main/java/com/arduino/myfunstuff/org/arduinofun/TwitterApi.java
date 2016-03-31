@@ -12,7 +12,7 @@ import retrofit2.Retrofit;
  * Created by minnera on 3/22/2016.
  */
 public class TwitterApi{
-    private static String key = "OAuth oauth_consumer_key=\"LT0uDEW3zPYDb0mJX9oGv279p\", oauth_nonce=\"1b1dde3aa2a96b08efa0031800f63544\", oauth_signature=\"YMrPUn3HkzcETVBphveH%2B%2BC7c6U%3D\", oauth_signature_method=\"HMAC-SHA1\", oauth_timestamp=\"1458674182\", oauth_token=\"2875106237-pRoCaQWPrejyAGWNwqIKgqeVl92gaFZ9xXqiN4b\", oauth_version=\"1.0\"";
+    private static String key = "";
     private static String baseUrl = "https://userstream.twitter.com/";
 
     public TwitterApi(){}
